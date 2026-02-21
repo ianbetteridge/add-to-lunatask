@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add to Lunatask</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Add to Lunatask</h1>
+      <button id="btn-settings" title="Settings" aria-label="Open settings">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="3"></circle>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"></path>
+          <path d="M12 2v2M12 20v2M2 12h2M20 12h2"></path>
+        </svg>
+      </button>
+    </header>
+
+    <div id="not-configured" class="hidden">
+      <p>Please configure your Lunatask API token and default area before using this extension.</p>
+      <button id="btn-go-settings" class="btn btn-primary">Open Settings</button>
+    </div>
+
+    <form id="task-form" class="hidden">
+      <div class="field">
+        <label for="task-name">Task name</label>
+        <input type="text" id="task-name" placeholder="Task name" autocomplete="off">
+      </div>
+
+      <div class="field">
+        <label for="task-note">Note</label>
+        <textarea id="task-note" rows="3" placeholder="Optional note (Markdown supported)"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="area-select">Area</label>
+        <select id="area-select"></select>
+      </div>
+
+      <div class="field">
+        <label for="scheduled-on">Schedule for</label>
+        <input type="date" id="scheduled-on">
+      </div>
+
+      <div id="status-msg" class="hidden"></div>
+
+      <button type="submit" id="btn-add" class="btn btn-primary">Add task</button>
+    </form>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

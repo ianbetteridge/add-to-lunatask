@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add to Lunatask – Settings</title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div id="app">
+    <h1>Add to Lunatask – Settings</h1>
+
+    <section>
+      <h2>API Token</h2>
+      <p class="hint">
+        Generate a token in the Lunatask desktop app under
+        <strong>Settings → Access tokens</strong>.
+      </p>
+      <div class="field">
+        <label for="api-token">Access token</label>
+        <div class="input-row">
+          <input type="password" id="api-token" placeholder="Paste your token here" autocomplete="off">
+          <button type="button" id="btn-toggle-token" class="btn btn-secondary">Show</button>
+        </div>
+      </div>
+      <button type="button" id="btn-verify" class="btn btn-secondary">Verify token</button>
+      <div id="verify-status" class="hidden status-msg"></div>
+    </section>
+
+    <section>
+      <h2>Areas</h2>
+      <p class="hint">
+        Add the Lunatask areas you want to use. You can find an area's ID in the
+        Lunatask web or desktop app — open the area and copy the UUID from the URL
+        or from the area settings.
+      </p>
+
+      <div id="areas-list"></div>
+
+      <div class="add-area-row">
+        <input type="text" id="new-area-name" placeholder="Area name (e.g. Work)">
+        <input type="text" id="new-area-id" placeholder="Area ID (UUID)">
+        <button type="button" id="btn-add-area" class="btn btn-secondary">Add</button>
+      </div>
+      <div id="area-error" class="hidden status-msg error"></div>
+
+      <div class="field" id="default-area-field">
+        <label for="default-area">Default area</label>
+        <select id="default-area"></select>
+      </div>
+    </section>
+
+    <div class="actions">
+      <button type="button" id="btn-save" class="btn btn-primary">Save settings</button>
+      <div id="save-status" class="hidden status-msg"></div>
+    </div>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>
