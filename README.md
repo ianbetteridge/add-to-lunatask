@@ -2,6 +2,13 @@
 
 A Chrome extension that adds the current page as a task in [Lunatask](https://lunatask.app).
 
+# About
+I'm a big fan of Lunatask. It's one of the few task managers which stores your tasks encrypted, so that even the company can't read them. 
+
+But unlike most task managers, there isn't an accompanying extension which allows you to add web links as tasks. You can do it via a book mark, but this just feels little old-school, even for me. 
+
+Thanks to Claude Code, writing something like this is easy enough even for me -- so I put this together for myself, and I'm publishing the code for anyone who wants to take it and make it better. I might make some improvements over time, but this does everything that I want it to do.
+
 ## Installation
 
 1. Download or clone this repository
@@ -25,4 +32,4 @@ Click the extension icon on any page. The task name is pre-filled with the page 
 
 ## Licence
 
-[GPL-3.0](LICENSE) © 2025 Ian Betteridge
+[GPL-3.0](LICENSE) © 2026 Ian Betteridge
